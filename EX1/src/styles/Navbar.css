@@ -1,0 +1,28 @@
+/* src/styles/Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; /* Black background for navbar */
+  padding: 10px;
+}
+
+.navbar a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  position: relative; /* Necessary for z-index and transform effects */
+  transition: transform 0.3s, z-index 0s; /* Transition for smooth effect */
+}
+
+.navbar a:hover {
+  transform: translateY(-5px); /* Slight move on hover */
+  z-index: 1; /* Bring the item to the front on hover */
+}
+
+.navbar a.clicked {
+  transform: translateY(-10px); /* Move item further up on click */
+  z-index: 2; /* Ensure clicked item is on top */
+  /* Optional: Add a background color or border to highlight the clicked item */
+  background-color: rgba(255, 255, 255, 0.2);
+}

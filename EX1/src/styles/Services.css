@@ -1,0 +1,20 @@
+/* src/styles/Services.css */
+.services {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.services .content-box {
+  border: 2px solid #ccc; /* Border color */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside the box */
+  background-color: #f9f9f9; /* Background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  max-width: 800px; /* Max width for the box */
+  width: 100%; /* Full width within its container */
+}

@@ -1,0 +1,38 @@
+/* src/components/AnimatedText.css */
+.animated-text {
+    display: inline-block;
+    position: relative;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .animated-text span {
+    display: inline-block;
+    opacity: 0;
+    animation: appear 0.5s forwards;
+    transition: transform 0.3s, z-index 0s; /* Transition for smooth hover and click effects */
+  }
+  
+  .animated-text span:hover {
+    transform: translateY(-5px); /* Slight move on hover */
+    z-index: 1; /* Bring the letter to the front on hover */
+  }
+  
+  .animated-text span.clicked {
+    transform: translateY(-10px); /* Move letter further up on click */
+    z-index: 2; /* Ensure clicked letter is on top */
+    /* Optional: add a slight scale effect */
+    transform: translateY(-10px) scale(1.2);
+  }
+  
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
